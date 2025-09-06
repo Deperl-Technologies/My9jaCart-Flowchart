@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My9jaCart Project Flowchart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .flowchart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .steps {
+            list-style-type: none;
+        }
+        
+        .step {
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .step:hover {
+            background: #e8f4fc;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .legend {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .legend-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        
+        .user { background-color: #3498db; }
+        .system { background-color: #2ecc71; }
+        .admin { background-color: #9b59b6; }
+        .payment { background-color: #e74c3c; }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .flowchart {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My9jaCart E-commerce Website Flowchart</h1>
+            <p class="description">A visual representation of the user journey, system processes, and administrative functions for the My9jaCart online shopping platform.</p>
+        </header>
+        
+        <div class="flowchart">
+            <div class="section">
+                <h2 class="section-title">User Registration & Authentication</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>User accesses website</li>
+                    <li class="step"><span class="step-number">2</span>Browse as guest or choose to register/login</li>
+                    <li class="step"><span class="step-number">3</span>Complete registration form</li>
+                    <li class="step"><span class="step-number">4</span>Verify email address</li>
+                    <li class="step"><span class="step-number">5</span>Login with credentials</li>
+                    <li class="step"><span class="step-number">6</span>Password recovery option if needed</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Product Browsing & Selection</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>View product categories</li>
+                    <li class="step"><span class="step-number">2</span>Search for specific products</li>
+                    <li class="step"><span class="step-number">3</span>Apply filters (price, category, rating)</li>
+                    <li class="step"><span class="step-number">4</span>View product details</li>
+                    <li class="step"><span class="step-number">5</span>Add items to cart</li>
+                    <li class="step"><span class="step-number">6</span>Save items for later</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Cart & Checkout Process</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>Review cart items</li>
+                    <li class="step"><span class="step-number">2</span>Modify quantities or remove items</li>
+                    <li class="step"><span class="step-number">3</span>Proceed to checkout</li>
+                    <li class="step"><span class="step-number">4</span>Select shipping address</li>
+                    <li class="step"><span class="step-number">5</span>Choose payment method</li>
+                    <li class="step"><span class="step-number">6</span>Complete payment</li>
+                    <li class="step"><span class="step-number">7</span>Receive order confirmation</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Custom Orders</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>Select "Others" option</li>
+                    <li class="step"><span class="step-number">2</span>Fill custom order form</li>
+                    <li class="step"><span class="step-number">3</span>Upload reference images</li>
+                    <li class="step"><span class="step-number">4</span>Submit request</li>
+                    <li class="step"><span class="step-number">5</span>Admin receives notification</li>
+                    <li class="step"><span class="step-number">6</span>Admin reviews and responds</li>
+                    <li class="step"><span class="step-number">7</span>User receives update</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Payment Options</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>Credit/Debit Card</li>
+                    <li class="step"><span class="step-number">2</span>Bank Transfer</li>
+                    <li class="step"><span class="step-number">3</span>Mobile Money</li>
+                    <li class="step"><span class="step-number">4</span>Secure payment gateway</li>
+                    <li class="step"><span class="step-number">5</span>Payment confirmation</li>
+                    <li class="step"><span class="step-number">6</span>Order processing</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Admin Dashboard</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>Login to admin portal</li>
+                    <li class="step"><span class="step-number">2</span>View dashboard analytics</li>
+                    <li class="step"><span class="step-number">3</span>Manage product catalog</li>
+                    <li class="step"><span class="step-number">4</span>Process orders</li>
+                    <li class="step"><span class="step-number">5</span>Review custom orders</li>
+                    <li class="step"><span class="step-number">6</span>Generate sales reports</li>
+                    <li class="step"><span class="step-number">7</span>Manage user accounts</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">User Account Features</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>View order history</li>
+                    <li class="step"><span class="step-number">2</span>Track current orders</li>
+                    <li class="step"><span class="step-number">3</span>Manage personal information</li>
+                    <li class="step"><span class="step-number">4</span>Save shipping addresses</li>
+                    <li class="step"><span class="step-number">5</span>View wishlist</li>
+                    <li class="step"><span class="step-number">6</span>Contact support</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Support & Content Pages</h2>
+                <ul class="steps">
+                    <li class="step"><span class="step-number">1</span>Access Help Center</li>
+                    <li class="step"><span class="step-number">2</span>View FAQ page</li>
+                    <li class="step"><span class="step-number">3</span>Contact via WhatsApp</li>
+                    <li class="step"><span class="step-number">4</span>Contact via email</li>
+                    <li class="step"><span class="step-number">5</span>Browse About Us page</li>
+                    <li class="step"><span class="step-number">6</span>Review Policies</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- <div class="legend">
+            <h3 class="legend-title">Flowchart Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="color-box user"></div>
+                    <span>User Process</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box system"></div>
+                    <span>System Process</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box admin"></div>
+                    <span>Admin Process</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box payment"></div>
+                    <span>Payment Process</span>
+                </div>
+            </div>
+        </div> -->
+        
+        <footer>
+            <p>My9jaCart Website Flowchart | Designed by Adeperl🍁</p>
+        </footer>
+    </div>
+</body>
+</html>
