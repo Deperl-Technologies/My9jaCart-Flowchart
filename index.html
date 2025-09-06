@@ -104,6 +104,41 @@
             font-weight: bold;
         }
         
+        .location-feature {
+            background: #fff4e6;
+            border-left: 4px solid #ff922b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .location-title {
+            font-size: 1.3rem;
+            color: #e67700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title::before {
+            content: "📍";
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .location-steps {
+            list-style-type: none;
+        }
+        
+        .location-step {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background: #fff9db;
+            border-radius: 4px;
+            border-left: 3px solid #ff922b;
+        }
+        
         .legend {
             background: white;
             border-radius: 10px;
@@ -141,6 +176,7 @@
         .system { background-color: #2ecc71; }
         .admin { background-color: #9b59b6; }
         .payment { background-color: #e74c3c; }
+        .location { background-color: #ff922b; }
         
         footer {
             text-align: center;
@@ -157,6 +193,11 @@
             h1 {
                 font-size: 2rem;
             }
+            
+            .legend-items {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -164,7 +205,7 @@
     <div class="container">
         <header>
             <h1>My9jaCart E-commerce Website Flowchart</h1>
-            <p class="description">A visual representation of the user journey, system processes, and administrative functions for the My9jaCart online shopping platform.</p>
+            <p class="description">A visual representation of the user journey, system processes, and administrative functions for the My9jaCart online shopping platform, including location-based features.</p>
         </header>
         
         <div class="flowchart">
@@ -178,6 +219,15 @@
                     <li class="step"><span class="step-number">5</span>Login with credentials</li>
                     <li class="step"><span class="step-number">6</span>Password recovery option if needed</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location Setup</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Set default delivery location during registration</li>
+                        <li class="location-step">Allow location detection for service availability</li>
+                        <li class="location-step">Select from list of supported regions</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -190,6 +240,15 @@
                     <li class="step"><span class="step-number">5</span>Add items to cart</li>
                     <li class="step"><span class="step-number">6</span>Save items for later</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location-Based Features</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Show products available in user's region</li>
+                        <li class="location-step">Display delivery timelines based on location</li>
+                        <li class="location-step">Show local promotions and deals</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -203,6 +262,15 @@
                     <li class="step"><span class="step-number">6</span>Complete payment</li>
                     <li class="step"><span class="step-number">7</span>Receive order confirmation</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location in Checkout</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Calculate shipping costs based on location</li>
+                        <li class="location-step">Estimate delivery time based on distance</li>
+                        <li class="location-step">Offer pickup points in user's area</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -216,8 +284,19 @@
                     <li class="step"><span class="step-number">6</span>Admin reviews and responds</li>
                     <li class="step"><span class="step-number">7</span>User receives update</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location for Custom Orders</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Specify location for custom order delivery</li>
+                        <li class="location-step">Check artisan availability in region</li>
+                        <li class="location-step">Location-based pricing for services</li>
+                    </ul>
+                </div>
             </div>
-            
+        </div>
+        
+        <div class="flowchart">
             <div class="section">
                 <h2 class="section-title">Payment Options</h2>
                 <ul class="steps">
@@ -228,6 +307,15 @@
                     <li class="step"><span class="step-number">5</span>Payment confirmation</li>
                     <li class="step"><span class="step-number">6</span>Order processing</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location-Based Payments</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Offer payment options popular in user's region</li>
+                        <li class="location-step">Local currency support</li>
+                        <li class="location-step">Region-specific payment security</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -241,6 +329,15 @@
                     <li class="step"><span class="step-number">6</span>Generate sales reports</li>
                     <li class="step"><span class="step-number">7</span>Manage user accounts</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location Management</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">View orders by region</li>
+                        <li class="location-step">Manage delivery zones</li>
+                        <li class="location-step">Regional performance analytics</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -253,6 +350,15 @@
                     <li class="step"><span class="step-number">5</span>View wishlist</li>
                     <li class="step"><span class="step-number">6</span>Contact support</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Location Preferences</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Manage multiple delivery addresses</li>
+                        <li class="location-step">Set primary delivery location</li>
+                        <li class="location-step">Location-based order history</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="section">
@@ -265,10 +371,19 @@
                     <li class="step"><span class="step-number">5</span>Browse About Us page</li>
                     <li class="step"><span class="step-number">6</span>Review Policies</li>
                 </ul>
+                
+                <div class="location-feature">
+                    <h3 class="location-title">Local Support</h3>
+                    <ul class="location-steps">
+                        <li class="location-step">Region-specific support contacts</li>
+                        <li class="location-step">Local service information</li>
+                        <li class="location-step">Regional business hours</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <!-- <div class="legend">
+        <!--<div class="legend">
             <h3 class="legend-title">Flowchart Legend</h3>
             <div class="legend-items">
                 <div class="legend-item">
@@ -287,11 +402,15 @@
                     <div class="color-box payment"></div>
                     <span>Payment Process</span>
                 </div>
+                <div class="legend-item">
+                    <div class="color-box location"></div>
+                    <span>Location Feature</span>
+                </div>
             </div>
         </div> -->
         
         <footer>
-            <p>My9jaCart Website Flowchart | Designed by Adeperl🍁</p>
+            <p>My9jaCart Website Flowchart | Designed By Adeperl🍁</p>
         </footer>
     </div>
 </body>
